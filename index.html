@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+    <title>Browser Fingerprint</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+
+
+<div class="container">
+    <div class="page-header">
+        <h1>Browser Fingerprint <img src="images/fingerprint.png" width="40" class="pull-right"></h1>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div>
+        <h2>Information</h2>
+        <p>
+            When you visit a website, online trackers may try to identify you based on how your computer and browser
+            work, even if you've installed software to protect your privacy.
+        </p>
+        <p>
+            This site tries to demonstrate how much data your browser reveals by just visiting a website.
+            Please note that anonymous data will be collected through this site for a security research project at ETH
+            Zürich.
+            Do not calculate your fingerprint if you do not want to participate.
+        </p>
+        <br>
+        <p>
+            <button type="button" id="btn" class="btn btn-primary">Get my fingerprint</button>
+        </p>
+        </blockquote>
+    </div>
+
+    <div id="errorMessage" class="alert alert-danger hidden" role="alert">Something went wrong!</div>
+
+    <div id="fingerprint_result_section" class="hidden">
+        <p class="text-center">
+            <img src="https://robohash.org/placeholder.png" id="fingerprint_robohash" width="200"> <br> <br>
+            <strong>
+                <span id="fp"></span>
+            </strong>
+        </p>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="compare_section" class="hidden">
+        <p>
+            If you want, you can compare your fingerprint with another one: <br>
+        </p>
+        <form class="form-inline">
+            <input type="text" class="form-control" id="compare_fingerprint" placeholder="Another Fingerprint"
+                   size="70">
+            <button type="button" id="btn-compare" class="btn btn-default">Compare</button>
+        </form>
+    </div>
+
+    <br>
+
+    <div id="comparison_result_section" class="hidden">
+        <p>
+            <strong>Comparison Result: <span id="comparison_result"></span> </strong>
+        </p>
+        <p>
+            A lower result means that fingerprints are more similar.
+        </p>
+    </div>
+
+    <br>
+
+    <div id="fingerprint_details_section" class="hidden">
+        <h2>Detailed Information</h2>
+        <p>Time used to calculate your fingerprint: <span id="fingerprint-time"></span></p>
+        <ul id="fingerprint-details"></ul>
+    </div>
+
+    <br>
+
+    <div>
+        <h2>Acknowledgements</h2>
+        <ul>
+            <li><a href="https://github.com/Valve/fingerprintjs2">Fingerprintjs2</a> - Responsible for most of the
+                details about your browser
+            </li>
+            <li>
+                <a href="https://github.com/muaz-khan/DetectRTC">DetectRTC</a> - Detects the WebRTC features
+            </li>
+            <li><a href="https://panopticlick.eff.org/">Panopticlick</a> - If you want to see how unique your
+                fingerprint is compared to other users
+            </li>
+            <li>
+                <a href="https://robohash.org/">RoboHash</a> - For the robots
+            </li>
+            <li>YOU - Thank you for helping me with my research project!</li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">Jonas Passerini</p>
+    </div>
+</footer>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script src="js/tlsh.min.js"></script>
+<script src="js/l06j2DbosqxqoU60HlJS_rtc.min.js"></script>
+<script src="js/7BIN0dETes7lZN03EAAi_fp2.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
